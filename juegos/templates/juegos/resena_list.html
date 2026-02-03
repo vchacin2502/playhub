@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reseñas</title>
+</head>
+<body>
+
+<h1>Reseñas</h1>
+
+<ul>
+    {% for resena in object_list %}
+        <li>
+            <strong>{{ resena.juego_titulo }}</strong> —
+            {{ resena.puntuacion }}/10 <br>
+            {{ resena.comentario }} <br>
+            <em>por {{ resena.usuario_username }}</em>
+        </li>
+    {% empty %}
+        <li>No hay reseñas aún.</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

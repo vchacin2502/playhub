@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Juegos</title>
+</head>
+<body>
+
+<h1>Juegos</h1>
+
+<ul>
+    {% for juego in object_list %}
+        <li>
+            {{ juego.titulo }} |
+            {{ juego.get_plataforma_display }} |
+            {{ juego.precio }} €
+        </li>
+    {% empty %}
+        <li>No hay juegos aún.</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
