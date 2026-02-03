@@ -15,7 +15,7 @@ class Juego(models.Model):
     precio = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        validators=[MinValueValidator(0.01)]  # precio > 0
+        validators=[MinValueValidator(0.01)]
     )
 
     fecha_lanzamiento = models.DateField()
